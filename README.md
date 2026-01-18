@@ -1,4 +1,4 @@
-# 📄 Project Report: Bioavailability Profiling of ChEMBL Compounds
+# 📄 Project Report: Drug Lipinski Analysis
 
 ## 1. Executive Summary
 This project performed a physicochemical analysis of bioactive compounds from the **ChEMBL database** to assess their oral "druggability." Using **Lipinski’s Rule of 5** as the filtration metric, we screened the dataset to separate high-potential oral drug candidates from likely attrition risks.
@@ -43,14 +43,16 @@ The dataset was processed using **Python** (Pandas, Seaborn). We engineered a "D
 
 | Metric | Count |
 | :--- | :--- |
-| **Total Compounds Analyzed** | 1502539 |
-| **Oral Candidates (Pass)** | 1083111 |
-| **Attrition Risk (Fail)** | 41928 |
+| **Total Compounds Analyzed** | 1,502,539 |
+| **Oral Candidates (Pass)** | 1,083,111 |
+| **Attrition Risk (Fail)** | 419,428 |
 | **Overall Pass Rate** | **72.09%** |
+
+*(Note: "Fail" count calculated as Total - Pass)*
 
 ---
 
 ## 5. Conclusion & Recommendations
 The analysis confirms that **Lipophilicity** is the primary bottleneck for larger molecules in this dataset. Future lead optimization efforts on the "Fail" candidates should focus on **fragment-based design**—reducing molecular weight to bring LogP back into the acceptable range (< 5).
 
-✅ The **[INSERT PASS COUNT]** compounds identified as "Pass" have been exported to `lipinski_pass_candidates.csv` for downstream docking and biological assay screening.
+✅ The **1,083,111** compounds identified as "Pass" have been exported to `lipinski_pass_candidates.csv` for downstream docking and biological assay screening.
